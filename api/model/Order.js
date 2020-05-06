@@ -1,0 +1,85 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+var order = new Schema({
+    event: {
+        type: String
+    },
+    date:{
+        type:String
+    },
+    location:{
+        type:String
+    },
+    guestlist:{
+        type:String
+    },
+    snacksveg:{
+        type:String
+    },
+    snacksnonveg:{
+        type:String
+    },
+    lunchveg:{
+        type:String
+    },
+    lunchnonveg:{
+        type:String
+    },
+    dinnerveg:{
+        type:String
+    },
+    dinnernonveg:{
+        type:String
+    },
+    cakeegg:{
+        type:String
+    },
+    cakeeggless:{
+        type:String
+    },
+    photograph:{
+        type:String
+    },
+    florists:{
+        type:String
+    },
+    entertainment:{
+        type:String
+    },
+    fireworks:{
+        type:String
+    },
+    projectors:{
+        type:String
+    },
+    decor:{
+        type:String
+    },
+    limos:{
+        type:String
+    },
+    ballons:{
+        type:String
+    },
+    cocktail:{
+        type:String
+    },
+    games:{
+        type:String
+    },
+    theme:{
+        type:String
+    },
+    dance:{
+        type:String
+    },
+    cards:{
+        type:String
+    },
+    music:{
+        type:String
+    },
+},
+);
+module.exports = mongoose.model('Order', order); 

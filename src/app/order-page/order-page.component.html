@@ -1,0 +1,294 @@
+<!-- =========================================================================== -->
+<!--                            *** FIRST PHOTO ***                              -->
+<!-- =========================================================================== -->
+<section id="budget">
+    <img src="../../assets/images/1.jpg" alt="Snow" style="width:100%;height: 500px;">
+    <div class="centered">Budget Calculator</div>
+</section>
+<br>
+<br>
+<div class="calculate">Calculate Your Party Budget!</div>
+<br>
+<br>
+<!-- ============ CALENDAR ================= -->
+<div class="Reserve">--- ALREADY RESERVED DATES ---</div>
+<br>
+<div class="calendar col-lg-8 offset-lg-4">
+<div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>MAY<br><span style="font-size:25px">2020</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li><span class="active">5</span></li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li><span class="active">20</span></li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li><span class="active">25</span></li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li><span class="active">30</span></li>
+  <li>31</li>
+</ul>
+</div>
+<h6 class="note">(NOTE: Highlighted dates are already booked.)</h6>
+<br>
+
+<!-- =========================================================================== -->
+<!--                                  *** ORDER FORM ***                           -->
+<!-- =========================================================================== -->
+
+<!-- -------------------------- (1st part) ---------------------------- -->
+<div class="container"id="orderformback">
+    <br>
+    <form>
+        <div class="form-row">
+          <br>
+            <div class="form-group col-md-6">
+                <label for="inputState"id="formoption1">Kind Of Event</label>
+                <select id="inputState" class="form-control" [(ngModel)]="event" name="event">
+                  <option name="event">Social Event</option>
+                  <option name="event">Wedding Event</option>
+                  <option name="event">Corporate Event</option>
+                  <option name="event">Birthday Event </option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail4"id="formoption2">Date Of The Event </label>
+                <input type="text" [(ngModel)]="date" name="date" class="form-control" id="inputEmail4"placeholder=" MM/DD/YYYY">
+              </div>
+        </div>
+<!-- -------------------------- (2nd part) ------------------------------ -->
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail3"id="formoption3">Venue/Location</label>
+              <input type="text" [(ngModel)]="location" name="location" class="form-control" id="inputEmail3" placeholder="Enter your event location">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4"id="formoption4">Guestlist</label>
+              <input type="text" [(ngModel)]="guestlist" name="guestlist" class="form-control" id="inputPassword4" placeholder="Number of your Guest">
+            </div>
+          </div>
+<!-- -------------------------- (3rd part) ------------------------------ -->
+        <div class="food"id="formoption5">--- Type Of Food ---</div>
+        <br>
+        <div class="form-row">
+            <div class="form-group col-md-2 offset-md-1"id="foodoption1">
+               <h5 class="subformoptionall"> SNACKS</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="snacksveg" name="snacksveg" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Veg</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="snacksnonveg" name="snacksnonveg" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Non-Veg</label>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-2 offset-md-1"id="foodoption2">
+                    <h5 class="subformoptionall">LUNCH</h5>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="lunchveg" name="lunchveg" id="inlineCheckbox3" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Veg</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="lunchnonveg" name="lunchnonveg" id="inlineCheckbox4" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Non-Veg</label>
+                  </div>
+            </div>
+
+            <div class="form-group col-md-2 offset-md-1"id="foodoption3">
+                <h5 class="subformoptionall">DINNER</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="dinnerveg" name="dinnerveg" id="inlineCheckbox5" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">Veg</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" [(ngModel)]="dinnernonveg" name="dinnernonveg" id="inlineCheckbox6" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Non-Veg</label>
+                  </div>
+                </div>
+
+                <div class="form-group col-md-2 offset-md-1"id="foodoption4">
+                   <h5 class="subformoptionall">CAKE</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [(ngModel)]="cakeegg" name="cakeegg" id="inlineCheckbox7" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">With Egg</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" [(ngModel)]="cakeeggless" name="cakeeggless" id="inlineCheckbox8" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Eggless</label>
+                      </div>
+                    </div>
+        </div>
+        <br>
+<!-- -------------------------- (4th part)(additional) ------------------------------ -->
+<div class="additional">--- Additional Services ---</div>
+<br>
+<div class="container col-lg-12"style="text-align:center;">
+
+<div class="form-check form-check-inline col-md-4 offset-md-2 ">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="photograph" name="photograph" id="inlineCheckboxa" value="option1">
+    <label class="form-check-label"  for="inlineCheckbox1">Photographers & Videographers</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1 ">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="florists" name="florists" id="inlineCheckboxb" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Florists</label>
+  </div>
+<br>
+<br>
+  <div class="form-check form-check-inline col-md-4 offset-md-2">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="entertainment" name="entertainment" id="inlineCheckboxc" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Entertainment & Entertainers</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="fireworks" name="fireworks" id="inlineCheckboxd" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Firewoks</label>
+  </div>
+<br>
+<br>
+  <div class="form-check form-check-inline col-md-4 offset-md-2">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="projectors" name="projectors" id="inlineCheckboxe" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Projectors & Speakers</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="decor" name="decor" id="inlineCheckboxf" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Decor</label>
+  </div>
+<br>
+<br>
+  <div class="form-check form-check-inline col-md-4 offset-md-2">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="limos" name="limos" id="inlineCheckboxg" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Limos & Transportation</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="ballons" name="ballons" id="inlineCheckboxh" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Ballons</label>
+  </div>
+<br>
+<br>
+  <div class="form-check form-check-inline col-md-4 offset-md-2">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="cocktail" name="cocktail" id="inlineCheckboxi" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Cocktail Bars</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="games" name="games" id="inlineCheckboxj" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Games</label>
+  </div>
+<br>
+<br>
+  <div class="form-check form-check-inline col-md-4 offset-md-2">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="theme" name="theme" id="inlineCheckboxk" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Theme Party</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="dance" name="dance" id="inlineCheckboxl" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Dance</label>
+  </div>
+<br>
+<br>
+  <div class="form-check form-check-inline col-md-4 offset-md-2">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="cards" name="cards" id="inlineCheckboxm" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Invitation Cards</label>
+  </div>
+  <div class="form-check form-check-inline col-md-4 offset-md-1">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="music" name="music" id="inlineCheckboxn" value="option1">
+    <label class="form-check-label" for="inlineCheckbox1">Music</label>
+  </div>
+  
+</div>
+    </form>
+<br>
+<h4 class="lastline">----------  For more venue options please contact us! ----------</h4>
+<br>
+</div>
+<br>
+<!-- =========================================================================== -->
+<!--                            *** RESERVE BUTTON ***                           -->
+<!-- =========================================================================== -->
+
+<div class="container"style="text-align:center">
+  <div class="card registerbox ">
+    <div class="card-body">
+  <button type="submit" (click)="addData()" class="btn btn-outline-danger" id="button1" data-toggle="modal" data-target="#staticBackdrop" >
+    Reserve Event
+  </button> &nbsp;
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header"id="upperspace">
+          <h5 class="modal-title" id="staticBackdropLabel">Event Reserved</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4 class="thank">Thank you!!</h4>
+          <h5 class="reservedquote"> We  have reseved a day for your event!</h5>
+          <p>(Details will be send to your email)</p>
+          <br>
+          <h6 class="lastquote">"We Take Care Of Preparation,</h6>
+          <h6 class="lastquote2">You Enjoy The Celebration"</h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn button5"[routerLink]="['/event']" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+<!-- =========================================================================== -->
+<!--                               *** LAST BUTTON ***                           -->
+<!-- =========================================================================== -->
+<br>
+<section id="end">
+  <img src="../../assets/images/1.jpg" alt="Snow" style="width:100%;height: 500px;">
+  <div class="last">"We bring you only good suprises."
+<br>
+<br>
+</div>
+</section>
+<br>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ************************************************************* DONE ********************************************************* -->
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
